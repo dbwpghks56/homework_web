@@ -11,7 +11,7 @@ void main() {
     )
   );
 }
-
+// run config 에 --web-renderer html 추가할 것
 class _App extends ConsumerWidget {
   const _App({Key? key}) : super(key: key);
 
