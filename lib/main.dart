@@ -6,7 +6,7 @@ import 'common/view/home_screen.dart';
 
 void main() {
   runApp(
-    ProviderScope(
+    const ProviderScope(
       child: _App(),
     )
   );
@@ -17,7 +17,7 @@ class _App extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: HomeScreen(),
     );
