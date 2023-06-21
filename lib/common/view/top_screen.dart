@@ -43,7 +43,6 @@ class _InputBox extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     String link = "";
-    final state = ref.watch(oEmbedProvider);
 
     return Container(
       width: MediaQuery.of(context).size.width,
@@ -73,9 +72,8 @@ class _InputBox extends ConsumerWidget {
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.amber
               ),
-              onPressed: state is OEmbedModelLoading ? null : () async {
+              onPressed: () async {
                 ref.read(oEmbedProvider.notifier).getOEmbed(link);
-
               },
               child: const Text("확인",
                 style: TextStyle(

@@ -9,7 +9,7 @@ class OEmbedModelError extends OEmbedModelBase{
 
   OEmbedModelError({required this.message});
 }
-
+class OEmbedModelNone extends OEmbedModelBase {}
 class OEmbedModelLoading extends OEmbedModelBase {}
 
 @JsonSerializable()
@@ -33,7 +33,7 @@ class OEmbedModel extends OEmbedModelBase {
   final String? thumbnail_url_with_play_button;
   final String? upload_date;
   final int? video_id;
-  final BigInt? cache_age;
+  final int? cache_age;
   final String? url;
   
   OEmbedModel({
@@ -61,6 +61,7 @@ class OEmbedModel extends OEmbedModelBase {
   });
 
   factory OEmbedModel.fromJson(Map<String, dynamic> json) => _$OEmbedModelFromJson(json);
+  Map<String, dynamic> toJson() => _$OEmbedModelToJson(this);
 }
 
 

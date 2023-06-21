@@ -13,9 +13,10 @@ class OEmbedStateNotifier extends StateNotifier<OEmbedModelBase?> {
 
   OEmbedStateNotifier({
     required this.oEmbedRepository
-  }) :super(null);
+  }) :super(OEmbedModelNone());
 
   Future<OEmbedModelBase> getOEmbed(String url) async {
+    state = OEmbedModelLoading();
     final resp = await oEmbedRepository.getOEmbed(url);
 
     state = resp;

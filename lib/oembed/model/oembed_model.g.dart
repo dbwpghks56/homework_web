@@ -26,9 +26,7 @@ OEmbedModel _$OEmbedModelFromJson(Map<String, dynamic> json) => OEmbedModel(
       thumbnail_url_with_play_button:
           json['thumbnail_url_with_play_button'] as String?,
       upload_date: json['upload_date'] as String?,
-      cache_age: json['cache_age'] == null
-          ? null
-          : BigInt.parse(json['cache_age'] as String),
+      cache_age: json['cache_age'] as int?,
       url: json['url'] as String?,
       video_id: json['video_id'] as int?,
     );
@@ -54,6 +52,6 @@ Map<String, dynamic> _$OEmbedModelToJson(OEmbedModel instance) =>
       'thumbnail_url_with_play_button': instance.thumbnail_url_with_play_button,
       'upload_date': instance.upload_date,
       'video_id': instance.video_id,
-      'cache_age': instance.cache_age?.toString(),
+      'cache_age': instance.cache_age,
       'url': instance.url,
     };
