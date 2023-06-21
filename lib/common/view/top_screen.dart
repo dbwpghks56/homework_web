@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:homework_web/oembed/model/oembed_model.dart';
+import 'package:homework_web/oembed/provider/oembed_provider.dart';
 
 class TopScreen extends StatefulWidget {
   const TopScreen({Key? key}) : super(key: key);
@@ -35,11 +38,12 @@ class _TopScreenState extends State<TopScreen> {
   }
 }
 
-class _InputBox extends StatelessWidget {
+class _InputBox extends ConsumerWidget {
   const _InputBox({Key? key}) : super(key: key);
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     String link = "";
+    final state = ref.watch(oEmbedProvider);
 
     return Container(
       width: MediaQuery.of(context).size.width,
@@ -69,7 +73,8 @@ class _InputBox extends StatelessWidget {
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.amber
               ),
-              onPressed: () {
+              onPressed: state is OEmbedModelLoading ? null : () async {
+                ref.read(oEmbedProvider.notifier).getOEmbed(link);
 
               },
               child: const Text("확인",
