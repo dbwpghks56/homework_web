@@ -47,7 +47,7 @@ Request or Response 객체를 json으로 직렬화 혹은 역직렬화 하기 �
 provider를 이용해 상태를 관리하게 되고 쉽게 접근 및 변경할 수 있습니다.
 
 ### dio 
-Http 통신하기 위해 사용된 package 입니다.
+Http 통신하기 위해 사용된 package 입니다.    
 interceptor 를 이용해 request, error, response 에 대해 쉽게 접근하고 가공할 수 있습니다.     
 현재 프로젝트에서는 Api 서버의 공통 response에서 data 및 Http Status 를 이용하기 위해 사용되었습니다.
 
