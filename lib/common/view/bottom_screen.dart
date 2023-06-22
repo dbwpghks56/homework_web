@@ -20,8 +20,11 @@ class BottomScreen extends ConsumerWidget {
     }
 
     if (state is OEmbedModelLoading) {
-      return Center(
-        child: CircularProgressIndicator(),
+      return Container(
+        padding: EdgeInsets.only(top: 50),
+        child: Center(
+          child: CircularProgressIndicator(),
+        ),
       );
     }
 

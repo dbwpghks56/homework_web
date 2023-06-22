@@ -23,13 +23,13 @@ class OEmbedModel extends OEmbedModelBase {
   final String? author_url;
   final int? is_plus;
   final String? html;
-  final int? width;
-  final int? height;
+  final dynamic width;
+  final dynamic height;
   final int? duration;
   final String? description;
   final String? thumbnail_url;
-  final int? thumbnail_width;
-  final int? thumbnail_height;
+  final dynamic thumbnail_width;
+  final dynamic thumbnail_height;
   final String? thumbnail_url_with_play_button;
   final String? upload_date;
   final int? video_id;

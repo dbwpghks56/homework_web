@@ -15,7 +15,7 @@ class _TopScreenState extends State<TopScreen> {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.cyan,
-      height: 168,
+      height: 170,
       child: const Center(
         child: Padding(
           padding: EdgeInsets.symmetric(vertical: 16.0, horizontal: 16.0),
