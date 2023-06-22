@@ -17,6 +17,10 @@ https://github.com/dbwpghks56/homework_server
 • riverpod    
 • dio
 
+## Overview
+본 프로젝트는 백엔드 서버와 통신해 사용자가 입력한 Url 의 OEmbed 구성요소를 보기 쉽게 표시해주는 프로젝트입니다.
+iframe 등 html 적인 요소의 내용 및 표시도 되어있습니다.
+
 ## Installation
 
 ```bash
@@ -25,8 +29,10 @@ $ git clone https://github.com/dbwpghks56/homework_web.git
 
 ## Running the app
 ```
+$ flutter pub get
 $ flutter run -d web --web-renderer html
 ```
+프로젝트를 실행하기 전에 반드시 ``` flutter pub get ```을 실행해주세요
 
 ### json_annotation      
 Request or Response 객체를 json으로 직렬화 혹은 역직렬화 하기 쉽게 만들기 위한 package 입니다.     
