@@ -45,7 +45,7 @@ class _InputBox extends ConsumerWidget {
     String link = "";
 
     return Container(
-      width: MediaQuery.of(context).size.width,
+      width: MediaQuery.of(context).size.width >= 1220 ? MediaQuery.of(context).size.width/ 2 : MediaQuery.of(context).size.width,
       color: Colors.white,
       padding: const EdgeInsets.all(10.0),
       child: Row(

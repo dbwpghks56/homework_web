@@ -36,6 +36,7 @@ class BottomScreen extends ConsumerWidget {
       padding: const EdgeInsets.all(16.0),
       child: Container(
         padding: const EdgeInsets.all(16.0),
+        width: MediaQuery.of(context).size.width >= 1220 ? MediaQuery.of(context).size.width/ 2 : MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
         color: Colors.white,
         child: ListView.separated(
